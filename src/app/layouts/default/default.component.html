@@ -1,13 +1,61 @@
-
-<app-header></app-header>
-
+<!-- 4eme version avec bootstrap -->
 <div class="">
-  <app-sidebar></app-sidebar>
 
-  <div class="">
-    <router-outlet></router-outlet>
+  <app-header></app-header>
+
+  <div class="container">
+    <div class="row ">
+      <div class="col-lg-2">
+        <app-sidebar></app-sidebar>
+      </div>
+      <div class="col-lg-9">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
   </div>
+
+  <!-- <app-footer></app-footer> -->
 
 </div>
 
-<app-footer></app-footer>
+<!-- 3eme version avec flexbox -->
+<!-- <div class="default">
+
+<app-header class="red"></app-header>
+
+<div class="main">
+<app-sidebar class="yellow"></app-sidebar>
+<router-outlet></router-outlet>
+</div>
+
+<app-footer class="blue"></app-footer>
+
+</div> -->
+
+
+
+<!-- Deuxieme version avec flexlayout -->
+<!-- <div fxLayout="column" class="">
+<app-header class="red"></app-header>
+<div fxLayout="row" class="">
+<app-sidebar class="yellow"></app-sidebar>
+<router-outlet></router-outlet>
+</div>
+<app-footer class="blue"></app-footer>
+</div> -->
+
+
+<!-- premiere version -->
+
+<!-- <app-header></app-header>
+
+<div class="">
+<app-sidebar></app-sidebar>
+
+<div class="">
+<router-outlet></router-outlet>
+</div>
+
+</div>
+
+<app-footer></app-footer> -->
