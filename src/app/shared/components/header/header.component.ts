@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,14 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  navbarOpen: boolean = false ;
+  navBarOpen: boolean = false ;
+
+  @Output()
+  isHidden = new EventEmitter<boolean>(); //
 
   constructor() { }
 
   ngOnInit() { }
 
   toggleNavBar() {
-    this.navbarOpen = !this.navbarOpen ;
+    this.navBarOpen = !this.navBarOpen ;
+    this.isHidden.emit(this.navBarOpen);
   }
+
+  closeNavBar() {
+    this.navBarOpen = false ;
+  }
+
+
 
 }
