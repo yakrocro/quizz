@@ -18,7 +18,8 @@ export class HeaderComponent implements OnInit {
 
   toggleNavBar() {
     this.navBarOpen = !this.navBarOpen ;
-    this.isHidden.emit(this.navBarOpen);
+    // this.isHidden.emit(this.navBarOpen);
+    console.log("this.navBarOpen => " + this.navBarOpen)
   }
 
   closeNavBar() {

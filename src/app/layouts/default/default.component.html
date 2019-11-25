@@ -1,61 +1,37 @@
-<!-- 4eme version avec bootstrap -->
-<div class="">
+<div class="container-fluid">
 
-  <app-header></app-header>
+  <div class="row wrapper">
 
-  <div class="container">
-    <div class="row ">
-      <div class="col-lg-2">
-        <app-sidebar class="red"></app-sidebar>
-      </div>
-      <div class="col-lg-9">
-        <router-outlet></router-outlet>
-      </div>
-    </div>
+    <aside class="col-12 col-sm-3 p-0 bg-dark">
+
+      <app-sidebar class="red" [hideSideBar]="getHideSideBar()"></app-sidebar>
+
+    </aside>
+
+    <main class="col bg-faded py-3">
+
+      <router-outlet></router-outlet>
+
+    </main>
+
   </div>
-
-  <!-- <app-footer></app-footer> -->
-
+  
 </div>
 
-<!-- 3eme version avec flexbox -->
-<!-- <div class="default">
+<!-- ancienne version -->
+<!-- <div class="">
 
-<app-header class="red"></app-header>
+<app-header (isHidden)="setHideSideBar($event)"></app-header>
 
-<div class="main">
-<app-sidebar class="yellow"></app-sidebar>
+<div class="container-fluid">
+<div class="row ">
+<div class="col-lg-2">
+<app-sidebar class="red" [hideSideBar]="getHideSideBar()"></app-sidebar>
+</div>
+<div class="col-lg-10">
 <router-outlet></router-outlet>
 </div>
-
-<app-footer class="blue"></app-footer>
+</div>
+</div>
 
 </div> -->
-
-
-
-<!-- Deuxieme version avec flexlayout -->
-<!-- <div fxLayout="column" class="">
-<app-header class="red"></app-header>
-<div fxLayout="row" class="">
-<app-sidebar class="yellow"></app-sidebar>
-<router-outlet></router-outlet>
-</div>
-<app-footer class="blue"></app-footer>
-</div> -->
-
-
-<!-- premiere version -->
-
-<!-- <app-header></app-header>
-
-<div class="">
-<app-sidebar></app-sidebar>
-
-<div class="">
-<router-outlet></router-outlet>
-</div>
-
-</div>
-
-<app-footer></app-footer> -->
